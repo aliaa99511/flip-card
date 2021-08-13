@@ -1,0 +1,63 @@
+
+
+body{
+    /*background: #3C5377;*/
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.flipBox{
+  width: 300px;
+  height: 300px;
+  background-color: transparent;
+  perspective: 1000px;
+  box-shadow: 0 2px 15px #adadad;
+  margin: 30px 10px 0;
+  padding: 5px;
+  
+}
+.flipBoxInner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+  transform-style: preserve-3d;
+}
+.flipBoxFront , .flipBoxBack{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+}
+.flipBoxBack{
+  padding: 15px;
+  color: #fff;
+  box-sizing: border-box;
+  transform: rotateY(180deg);
+}
+.flipBox:hover .flipBoxInner{
+  transform: rotateY(180deg);
+}
+.flipBoxFront img{
+    width: 100%;
+    height: 100%;
+}
+.flipBoxBack h1{
+  margin: 0;
+  padding-left: 4px;
+}
+.flipBoxBack h5{
+  margin: 0;
+  padding: 5px 0 10px;
+  border-bottom: 1px solid #fff;
+}
+.flipBoxBack p{
+  font-size: 14px;
+  line-height: 24px;
+}
